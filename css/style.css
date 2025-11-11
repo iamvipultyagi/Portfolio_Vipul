@@ -1,5 +1,7 @@
 /* HEADER */
 header{
+    padding: 0;
+    margin: 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -9,9 +11,10 @@ header{
     justify-content: space-between;
     align-items: center;
     background: black;
-    padding: 22px 15%;
+    padding: 15px 40px;
     border-bottom: 1px solid transparent;
     transition: all .45s ease;
+    box-sizing: border-box;
 }
 .logo{
     color: var(--text-color);
@@ -24,6 +27,7 @@ span{
 }
 .navlist{
     display: flex;
+    
 }
 .navlist a{
     color: var(--second-color);
@@ -31,6 +35,7 @@ span{
     font-weight: 500;
     margin: 0 25px;
     transition: all .45s ease;
+
 }
 .navlist a:hover{
     color: var(--main-color);
@@ -48,9 +53,12 @@ span{
 }
 /* HOME */
 section{
-    padding: 160px 15%;
+    
+    padding: 100px 15%;
 }
 .home{
+    margin: 0;
+    padding: 100px;
     position: relative;
     height: 100vh;
     width: 100%;
@@ -128,6 +136,7 @@ section{
 /* ABOUT */
 
 .about{
+    padding: 100px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
@@ -164,6 +173,7 @@ section{
 /* My Certificates */
 
 .certificate{
+    padding: 100px;
     background: var(--second-bg-color);
 }
 .main-text{
@@ -224,7 +234,9 @@ section{
 
 
 /* PORTFOLIO */
-
+.portfolio{
+    padding: 100px;
+}
 .portfolio-content{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(350px,auto));
@@ -237,37 +249,45 @@ section{
     justify-content: center;
 }
 .row{
-    position: relative;
-    overflow: hidden;
+    position:relative;
+    overflow:hidden;
     border-radius: 8px;
     cursor: pointer;
-    height: 300px;
+    background: #111;
+    height: 400px;
     width: 48%;
 }
 .row img{
     width: 100%;
+    height: 300px;
+    object-fit: cover; 
     border-radius: 8px;
-    display: block;
+    display:block;
     transition:all 0.5s ease-in-out;
 }
 .layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1),#0e0d0d);
     position: absolute;
+    width: 100%;a
+    height: 100%;
+    
+    /* background: #0e0d0d; */
     left: 0;
     bottom: 0;
-    overflow: hidden;
+    overflow:hidden;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    padding: 0 45px;
-    transition: all 0.5s ease-in-out;
+    text-align: center;   
+    padding: 10px;
+    /* transition: all 0.5s ease-in-out; */
+    color: white;
+    border-radius: 8px;
 }
 .layer h5{
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 1px;
 }
 .layer p{
     color: var(--second-color);
@@ -280,10 +300,12 @@ section{
 }
 .row:hover .layer{
     height: 80%;
+    background: linear-gradient(rgba(0,0,0,0.1),#0e0d0d);
 }
 /* CONTACT */
 
 .contact{
+    padding: 100px;
     background: var(--second-bg-color);
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -370,7 +392,7 @@ section{
 /* FOOTER */
 
 .footer{
-    padding: 20px 15%;
+    padding: 10px 1%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -391,6 +413,7 @@ section{
 
 /* EXPERIENCE & EDUCATION */
 .experience, .education {
+    padding: 100px;
     background: var(--second-bg-color);
 }
 

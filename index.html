@@ -38,7 +38,30 @@
             <li><a href="#portfolio">Projects</a></li>
             <li><a href="#certificate">Certificates</a></li>
             <li><a href="#contact">Contact Me</a></li>
-            <li><a href="https://drive.google.com/file/d/1FudfwcG42G-MKsGnGQ1v7WP2MMSXOMzH/view?usp=sharing" class="btn" target="_blank">Resume <i class='bx bxs-download'></i></a></li>
+            <!-- <li><a href="https://drive.google.com/file/d/1FudfwcG42G-MKsGnGQ1v7WP2MMSXOMzH/view" class="btn" target="_blank"
+                download="https://drive.google.com/file/d/1FudfwcG42G-MKsGnGQ1v7WP2MMSXOMzH/view">
+                Resume 
+                <i class='bx bxs-download'>
+
+                </i>
+            </a> -->
+            <!-- <li>
+  <a 
+    href="https://drive.google.com/uc?export=download&id=1FudfwcG42G-MKsGnGQ1v7WP2MMSXOMzH"
+    class="btn"
+    target="_blank"
+    download="Vipul_Tyagi_Resume.pdf"
+  >
+    Resume 
+    <i class='bx bxs-download'></i>
+  </a>
+</li> -->
+<button class="btn" onclick="openAndDownloadResume()">
+  Resume
+  <i class='bx bxs-download'></i>
+</button>
+
+        </li>
         </ul>
         <div class='bx bx-menu' id="menu-icon"></div>
     </header>
@@ -160,14 +183,16 @@
                     </div>
                 </div>
             </div>
+            
             <div class="row">
-                <img src="/images/netflix.png">
+                <div><img src="/images/netflix.png"></div>
                 <div class="layer">
                     <h5>Netflie - A movie recommendation website</h5>
+                
                     <!-- <p>Built a responsive food ordering platform with e-commerce functionality. Implemented RESTful APIs for user authentication, cart management, and order tracking with MongoDB integration.</p> -->
                     <div class="project-links">
                         <a href="https://github.com/iamvipultyagi/netflix-movies-recommendation" target="_blank" title="GitHub Repository"><i class='bx bxl-github'></i></a>
-                        <a href="https://netflix-movies-recommendations-hc3ins5bu.vercel.app/" target="_blank" title="Live Demo"><i class='bx bx-link-external'></i></a>
+                        <a href="https://netflix-movies-recommendations.vercel.app/" target="_blank" title="Live Demo"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
             </div>
@@ -328,6 +353,30 @@
     <!-- gallery SCRIPT -->
     <script src="js/lightbox-plus-jquery.min.js"></script>
     <script src="js//script.js"></script>
+
+
+
+
+
+    <!-- Re -->
+     <script>
+  function openAndDownloadResume() {
+    // 1. Open resume in a new tab
+    window.open(
+      "https://drive.google.com/file/d/1FudfwcG42G-MKsGnGQ1v7WP2MMSXOMzH/preview",
+      "_blank"
+    );
+
+    // 2. Trigger download
+    const link = document.createElement("a");
+    link.href = "https://drive.google.com/uc?export=download&id=1FudfwcG42G-MKsGnGQ1v7WP2MMSXOMzH";
+    link.download = "Vipul_Tyagi_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+</script>
+
 
 </body>
 </html>
